@@ -32,7 +32,7 @@ function getArticlesList(namespace) {
     console.log(data)
     for (let i = 0; i < data.data.length; i++) {
         let d=new Date(Date.parse(data.data[i].updated_at));
-        let article=new Article(data.data[i].title,data.data[i].slug,data.data[i].description,data.data[i].likes_count,data.data[i].comments_count,data.data[i].last_editor.name,d.toLocaleDateString());
+        let article=new Article(data.data[i].title,data.data[i].slug,data.data[i].description,data.data[i].likes_count,data.data[i].comments_count,data.data[i].last_editor.name,d.toLocaleDateString()+d.toLocaleTimeString());
         articles.push(article);
     }
     return articles;
@@ -42,7 +42,7 @@ function getArticle(namespace,slug) {
     console.log(data);
     let d=new Date(Date.parse(data.data.updated_at));
     console.log(d.toLocaleTimeString())
-    let article=new Article(data.data.title,data.data.slug,data.data.body_html,data.data.likes_count,data.data.comments_count,data.data.creator.name,d.toLocaleTimeString());
+    let article=new Article(data.data.title,data.data.slug,data.data.body_html,data.data.likes_count,data.data.comments_count,data.data.creator.name,d.toLocaleDateString()+d.toLocaleTimeString());
     return article;
 }
 function deleteNamespace(namespace) {
