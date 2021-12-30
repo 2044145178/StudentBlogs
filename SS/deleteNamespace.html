@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除namespace</title>
+    <style>
+        body{
+            text-align: center;
+
+        }
+        .input button{
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            font-size: 25px;
+        }
+        .input input{
+            text-align: center;
+            width: 300px;
+            height: 50px;
+            font-size: 25px;
+        }
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="YQ_API.js"></script>
+    <script src="YQ_service.js"></script>
+    <script>
+        function Trim(str)
+        {
+            return str.replace(/(^\s*)|(\s*$)/g, "");
+        }
+
+        function toDeleteNamespace() {
+            let namespace=$('#namespace').val();
+            namespace=Trim(namespace);
+            if (namespace!=''){
+                if (deleteNamespace(namespace)){
+                    alert("删除成功")
+                }else{
+                    alert("删除失败,该namespace不存在！")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <DIV class="input">
+        <input type="text" id="namespace" placeholder="输入要删除的namespace">
+        <button type="submit" id="submit" onclick="toDeleteNamespace()">提交</button>
+        <br>
+        <a style="font-size: 25px" href="./index.html">返回首页</a>
+    </DIV>
+</body>
+</html>

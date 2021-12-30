@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="assets/css/Login.css">
+    <style>
+        body {
+            background-image: url(./灰色背景1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-lg-3 col-md-4 col-6">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#"><img src="assets/images/logo2.png" alt="" class="img-fluid" width="25%"></a>
+        </div>
+        <!-- End of Logo -->
+    </div>
+    <div id="bigbox">
+        <h1>LOGIN</h1>
+        <div class="inputbox">
+            <div class="inputtext">
+                <img src="assets/images/login1.jpg" alt="1">
+                <input type="text" placeholder="username" id="username" onchange="user_change()">
+                <span class="point" id="user_point"><span class="triangle"></span>账号长度不能小于8</span>
+            </div>
+
+            <div class="inputtext">
+                <img src="assets/images/login2.jpg" alt="2">
+                <input type="password" placeholder="password" id="password" onchange="password_change()">
+                <span class="point" id="password_point"><span class="triangle"></span>密码长度不能小于8</span>
+            </div>
+        </div>
+        <div class="buttonbox">
+            <button>login</button>
+            <button>register</button>
+        </div>
+    </div>
+
+</body>
+<script src="assets/js/Login.js"></script>
+
+</html>

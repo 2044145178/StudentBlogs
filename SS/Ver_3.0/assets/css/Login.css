@@ -1,0 +1,107 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: url(../images/2.jpg); */
+
+}
+
+#bigbox {
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, .8);
+    width: 400px;
+    height: 300px;
+    background-repeat: 10px;
+    text-align: center;
+    box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, .5);
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#bigbox h1 {
+    /* 标题颜色 */
+    color: white;
+}
+
+#bigbox .inputbox {
+   margin-top: 20px;
+}
+
+#bigbox .inputbox .inputtext {
+    /* 输入框盒子 */
+    position: relative;
+    margin-top: 30px;
+}
+
+#bigbox .inputbox .inputtext input {
+    /* 输入框样式 */
+    background-color: rgba(0, 0, 0, .5);
+    border: 0;
+    padding: 10px 30px;
+    color: white;
+    border-bottom: 1px white solid;
+}
+
+#bigbox .buttonbox button{
+    /* 按钮样式 */
+    border: 2px rgb(43, 220, 226) solid;
+    width: 100px;
+    height: 35px;
+    color: white;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+
+}
+
+
+#bigbox .inputbox .inputtext img {
+    /*图片位置 */
+    position: absolute;
+    top: 8px;
+    left: 98px;
+    height: 16px;
+    width: 16px;
+}
+#bigbox .buttonbox{
+    margin-right: 20px;
+}
+
+#bigbox .buttonbox button:hover {
+    /* 按钮点击样式 */
+    border: 2px white solid;
+    background-color: rgb(43, 220, 226);
+    box-shadow:0px 0px 10px rgb(43, 220, 226);
+}
+
+#bigbox .inputbox .inputtext .point {
+    /* 提示框 */
+    display: none;
+    padding: 2px 0;
+    width: 30%;
+    text-align: center;
+    font-size: 10px;
+    color: red;
+    position: absolute;
+    right: 150px;
+    top: 40px;
+    background-color: #FFF;
+    border: 1px red solid;
+    border-radius: 5px;
+
+}
+
+#bigbox .inputbox .inputtext .point .triangle {
+    /* 提示框三角标 */
+    display: block;
+    border-width: 4px;
+    position: absolute;
+    bottom: 19px;
+    left: 6px;
+    border-style: solid dashed dashed;
+    border-color:  transparent transparent #FFF;
+    font-size: 0;
+    line-height: 0;
+}
